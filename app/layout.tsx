@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {  Merriweather, Italiana  } from "next/font/google";
 import "./globals.css";
 import { MdMenu } from "react-icons/md";
+import Header from "@/components/custom/header";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -38,10 +39,3 @@ export default function RootLayout({
   );
 }
 
-const Header = () => {
-  return (
-    <header className="flex h-[60px] items-center justify-between">
-      <MdMenu />
-    </header>
-  );
-};

@@ -1,13 +1,17 @@
-import React from "react";
+import ContactForm from "@/components/custom/contact-form";
+import Footer from "@/components/custom/footer";
+import Hero from "@/components/custom/hero";
+import Services from "@/components/custom/services";
+import Testimonials from "@/components/custom/testimonials";
 
-type Props = {};
-
-const Page = (props: Props) => {
+const Page = () => {
   return (
     <main>
-      <h1 className="md:4xl font-style text-3xl">
-        Welcome to {`Jemila's`} Portifolio
-      </h1>
+      <Hero />
+      <Services />
+      <Testimonials />
+      <ContactForm />
+      <Footer />
     </main>
   );
 };
