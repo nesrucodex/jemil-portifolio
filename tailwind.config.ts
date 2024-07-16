@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        merriweather: ["var(--font-merriweather)"],
+        lato: ["var(--font-lato)"],
         italiana: ["var(--font-italiana)"],
       },
       colors: {

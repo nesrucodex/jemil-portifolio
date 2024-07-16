@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import {  Merriweather, Italiana  } from "next/font/google";
+import { Lato, Italiana } from "next/font/google";
 import "./globals.css";
 import { MdMenu } from "react-icons/md";
 import Header from "@/components/custom/header";
 
-const merriweather = Merriweather({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-merriweather",
-  weight: ["300" , "400" , "700" , "900"],
+  variable: "--font-lato",
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 const italiana = Italiana({
   subsets: ["latin"],
   variable: "--font-italiana",
   weight: ["400"],
-})
+});
 
 export const metadata: Metadata = {
   title: "Jemila Card Designer",
@@ -29,8 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${merriweather.variable} ${italiana.variable}`}>
-        <div className="font-merriweather container">
+      <body className={`${lato.variable} ${italiana.variable}`}>
+        <div className="font-lato container">
           <Header />
           {children}
         </div>
@@ -38,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-

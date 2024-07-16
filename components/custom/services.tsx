@@ -17,7 +17,7 @@ const Services = () => {
           range of services to meet all your print needs.
         </p>
       </div>
-      <div className="mt-10 flex flex-wrap gap-8 justify-center">
+      <div className="mt-10 flex flex-wrap justify-center gap-8">
         {SERVICES.map((service) => (
           <ServiceCard key={service.title} {...service} />
         ))}
@@ -34,10 +34,11 @@ const ServiceCard = ({
   linkURL,
 }: Service) => {
   return (
-    <div className="flex flex-col gap-4 w-full md:w-[22rem]">
- 
-      {icon}
-      <h3 className="text-xl font-bold">{title}</h3>
+    <div className="flex w-full flex-col gap-4 md:w-[22rem]">
+      <div className="flex items-center gap-5">
+        {icon}
+        <h3 className="text-xl font-bold">{title}</h3>
+      </div>
       <p className="text-muted-foreground">{description} </p>
       <Button asChild variant="outline" className="self-end">
         <Link href={linkURL || "#"}>{linkText || "Learn More"}</Link>
